@@ -1,4 +1,4 @@
-# Wordpress-Docker stack restoration
+# WP-Docker restore
 
 # INTRODUCTION
 You have deployed your wordpress site using docker with docker-compose and you want to restore it on another machine
