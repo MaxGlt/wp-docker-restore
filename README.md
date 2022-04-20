@@ -87,3 +87,10 @@ Assign permissions to www-data
 ```
 chown -R www-data:www-data /var/www/html
 ```
+Exit the container
+
+Restart the docker service 
+```
+sudo systemctl restart docker.service
+```
+
