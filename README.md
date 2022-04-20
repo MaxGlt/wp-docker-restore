@@ -38,7 +38,7 @@ When you have removed the containers and images, proceed as follows to rebuild y
 docker-compose up -d
 ```
 
-- docker-compose.yml example
+example : docker-compose.yml
 ```
 version: '3.1'
 
