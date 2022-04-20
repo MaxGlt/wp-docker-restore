@@ -85,7 +85,7 @@ docker exec -it wordpress_wordpress_1
 ```
 Assign permissions to www-data
 ```
-chown -R www-data:www-data /var/www/html
+chown -R www-data:www-data /var/www/html/
 ```
 Exit the container
 
