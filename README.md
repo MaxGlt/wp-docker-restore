@@ -24,7 +24,7 @@ sudo mv /var/lib/docker var/lib/docker.BACK
 ```
 Copy the contents of your backup to the directory of your new machine in var/lib/docker like this :
 ```
-sudo mv /PATH/PATH/docker/* var/lib/docker/
+sudo cp /PATH/PATH/docker/ var/lib/docker/
 ```
 ## REBUILD
 When you have done this, if you had not stopped the containers on your old machine they will be displayed 'up' otherwise you will have to rebuild your stack from the backed up volumes.
@@ -73,4 +73,17 @@ volumes:
   db:
 ```
 ## PERMISSION
-www-data
+When you have rebuilt your stack from your initial docker-compose, you will encounter some permissions errors when connecting to your wordpress admin space. (This is due to the fact that the rights have been assigned to root.)
+
+Therefore you need to enter your wordpress_wordpress container to assign permissions to : www-data
+
+To do so, proceed as follows :
+
+To enter the container
+```
+docker exec -it wordpress_wordpress_1
+```
+Assign permissions to www-data
+```
+chown -R www-data:www-data /var/www/html
+```
