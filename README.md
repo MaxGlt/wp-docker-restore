@@ -2,7 +2,7 @@
 
 # INTRODUCTION
 You have deployed your wordpress site using docker and you want to restore it on another machine
-# REQUIREMENT
+# REQUIREMENTS
 - Operating system: Debian Bullseye
 - System version : 64 bits
 ### BACKUP
@@ -21,5 +21,5 @@ sudo mv /var/lib/docker var/lib/docker.BACK
 ```
 Copy the contents of your backup to the directory of your new machine in var/lib/docker like this :
 ```
-sudo mv /PATH/PATH/docker/* var/lib/docker
+sudo mv /PATH/PATH/docker/* var/lib/docker/
 ```
